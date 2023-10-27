@@ -2,12 +2,14 @@ import { fruit } from "./fruit.js";
 
 // Access DOM
 const inputElement = document.querySelector("input");
+const buttonElement = document.querySelector("button");
 const ulElement = document.querySelector("ul");
 const suggestionsElement = document.querySelector(".suggestions");
 
 // Event Handlers
 window.onload = resizeSuggestions;
 window.onresize = resizeSuggestions;
+buttonElement.onclick = reset;
 inputElement.onkeyup = updateSuggestions;
 
 // Update LIs in UL
@@ -56,4 +58,10 @@ function selectSuggestion(fruit) {
 function clearSuggestions() {
   ulElement.innerHTML = "";
   suggestionsElement.style.padding = "0";
+}
+
+// Clear input and suggestions
+function reset() {
+  inputElement.value = "";
+  updateSuggestions();
 }
