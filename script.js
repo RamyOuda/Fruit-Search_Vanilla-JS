@@ -25,8 +25,11 @@ function updateSuggestions() {
         const newLiElement = document.createElement("li");
         const boldFruit = formatFruit(fruit, searchText);
 
-        suggestionsElement.style.padding = "16px";
         newLiElement.innerHTML = boldFruit;
+        newLiElement.onclick = () => selectSuggestion(fruit);
+
+        suggestionsElement.style.padding = "16px";
+
         ulElement.append(newLiElement);
       }
     });
@@ -41,6 +44,12 @@ function formatFruit(fruit, searchText) {
 // Set the suggestions element to have the same width as the input
 function resizeSuggestions() {
   suggestionsElement.style.width = inputElement.offsetWidth + "px";
+}
+
+// Update input & suggestions when an LI is clicked
+function selectSuggestion(fruit) {
+  inputElement.value = fruit;
+  clearSuggestions();
 }
 
 // Clear the suggestions list
