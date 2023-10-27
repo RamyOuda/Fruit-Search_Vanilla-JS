@@ -52,6 +52,7 @@ function resizeSuggestions() {
 function selectSuggestion(fruit) {
   inputElement.value = fruit;
   clearSuggestions();
+  searchImages(fruit);
 }
 
 // Clear the suggestions list
@@ -64,4 +65,11 @@ function clearSuggestions() {
 function reset() {
   inputElement.value = "";
   updateSuggestions();
+}
+
+// Search selected fruit images on Google
+function searchImages(fruit) {
+  setTimeout(() => {
+    window.open(`https://www.google.com/search?tbm=isch&q=${fruit}`, "_blank");
+  }, 500);
 }
