@@ -21,6 +21,12 @@ input {
 li {
   font-size: 3rem;
   list-style-type: none;
+  padding: 8px;
+  border-radius: 16px;
+}
+
+li:hover {
+  background-color: #ff7300;
 }
 
 .search-container {
