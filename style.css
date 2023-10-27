@@ -10,12 +10,19 @@ body {
 }
 
 input {
-  min-width: 320px;
+  min-width: 256px;
   width: 40%;
   height: 50px;
   font-size: 32px;
   text-align: center;
-  margin-bottom: 32px;
+  margin-right: 8px;
+}
+
+button {
+  font-size: 24px;
+  height: 54px;
+  width: 80px;
+  padding: 8px;
 }
 
 li {
@@ -28,6 +35,14 @@ li {
 li:hover {
   background-color: #ff7300;
   cursor: pointer;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 32px;
+  width: 100%;
 }
 
 .search-container {
