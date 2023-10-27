@@ -27,6 +27,7 @@ li {
 
 li:hover {
   background-color: #ff7300;
+  cursor: pointer;
 }
 
 .search-container {
